@@ -1,0 +1,55 @@
+.table-container {
+    overflow-x: auto;
+}
+
+@keyframes progress {
+    0% {
+      width: 100%;
+    }
+    100% {
+      width: 0%;
+    }
+  }
+
+  /* Add this to App.css or a global CSS file */
+.a4-view {
+  background: white;
+  width: 210mm;
+  min-height: 297mm;
+  max-width: 210mm;
+  margin: 24px auto;
+  box-shadow: 0 0 8px #ccc;
+  padding: 24px 16px;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+/* Print A4 size for invoice */
+@media print {
+  @page {
+    size: A4;
+    margin: 16mm 10mm 16mm 10mm; /* Adjust margins as needed */
+  }
+  body {
+    background: white !important;
+  }
+  .a4-view {
+    width: 210mm !important;
+    min-height: 297mm !important;
+    max-width: 210mm !important;
+    margin: 0 auto !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    page-break-after: always;
+    padding: 0 !important;
+  }
+  /* Hide UI elements not needed in print */
+  .p-6, .min-h-screen, .bg-gray-800, .bg-gray-100, .text-black, .text-white {
+    background: none !important;
+    color: black !important;
+  }
+  /* Hide buttons and navigation in print */
+  button, .flex.gap-4, .w-full.flex.justify-between.items-center.mb-4 {
+    display: none !important;
+  }
+}
