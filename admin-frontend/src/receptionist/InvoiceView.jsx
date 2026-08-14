@@ -289,6 +289,11 @@ Invoice #: ${invoice.invoiceId || invoice.ticketNumber || 'N/A'}
 Date: ${new Date().toLocaleDateString()}
 ${invoice.phone ? `Phone: ${invoice.phone}` : ''}
 
+Store Details:
+Address: Bramhanpuri, Near Swami Samarth Mandir, Urun Ishwarpur, Maharashtra 415409
+Phone: 9763636381
+Timings: 8.30 am to 8.00 pm
+
 Thank you for choosing our services!
 
 Best regards,
@@ -433,7 +438,7 @@ Your Service Team`;
       // Build the WhatsApp message
       // const deviceModel = `${invoice.deviceBrand?.name || 'Device'} ${invoice.model?.name || 'Model'}`;
       const deviceModel = `${invoice.model?.name || 'Model'}`;
-      const message = `*Invoice - ${ticketNo}*\n\nHi ${invoice.customerName || 'Valued Customer'}!\n\nYour invoice is ready.\n${formattedAmount ? `\n*Total Amount:* ${formattedAmount}\n` : ''}\n*Invoice Details:*\n- Invoice Number: ${ticketNo}\n- Device: ${deviceModel}\n- Date: ${new Date().toLocaleDateString('en-IN')}\n\nTap below to view and download your invoice:\n${invoiceUrl}\n\nThank you for choosing Sushant Computerized Mobile Repaire Center!\n\n_Sushant Computerized Mobile Repaire Center Team_`;
+      const message = `*Invoice - ${ticketNo}*\n\nHi ${invoice.customerName || 'Valued Customer'}!\n\nYour invoice is ready.\n${formattedAmount ? `\n*Total Amount:* ${formattedAmount}\n` : ''}\n*Invoice Details:*\n- Invoice Number: ${ticketNo}\n- Device: ${deviceModel}\n- Date: ${new Date().toLocaleDateString('en-IN')}\n\nTap below to view and download your invoice:\n${invoiceUrl}\n\n*Store Details:*\n- Address: Bramhanpuri, Near Swami Samarth Mandir, Urun Ishwarpur, Maharashtra 415409\n- Phone: 9763636381\n- Timings: 8.30 am to 8.00 pm\n\nThank you for choosing Sushant Computerized Mobile Repaire Center!\n\n_Sushant Computerized Mobile Repaire Center Team_`;
 
       // Open WhatsApp Web/App with pre-filled message using wa.me redirect
       const waUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
@@ -1147,16 +1152,19 @@ const findTableAtPosition = (yPosition, tablePositions) => {
                             Sushant Computerized Mobile Repaire Center
                           </p>
                           <p style={{ margin: "1px 0", fontSize: "10px", color: "#000000" }}>
-                            shop no 10 Mount Unique Residency, Pashan-sus Rd, Near pratham WINE
+                            Bramhanpuri, Near Swami Samarth Mandir, Urun Ishwarpur, Maharashtra 415409
                           </p>
                           <p style={{ margin: "1px 0", fontSize: "10px", color: "#000000" }}>
-                            Phone no.: 9075821821
+                            Phone no.: 9763636381
+                          </p>
+                          <p style={{ margin: "1px 0", fontSize: "10px", color: "#000000" }}>
+                            Timings: 8.30 am to 8.00 pm
                           </p>
                           <p style={{ margin: "1px 0", fontSize: "10px", color: "#000000" }}>
                             Email: sushantnangrepatil@gmail.com
                           </p>
                           <p style={{ margin: "2px 0", fontSize: "11px", color: "#000000" }}>
-                            GSTIN: 27AIJPL3296J1ZR
+                            GSTIN: -
                           </p>
                           <p style={{ margin: "2px 0", fontSize: "11px", color: "#000000" }}>
                             State: 27-Maharashtra

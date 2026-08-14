@@ -45,10 +45,12 @@ const InvoiceTable = ({ invoices = [], pagination = {}, onPageChange, onPageSize
 
   const handleMarkAsPaid = async (invoiceId) => {
     try {
+      const token = localStorage.getItem('accessToken'); // Get auth token
       const response = await fetch(`${import.meta.env.VITE_APIURL}/api/sale-orders/${invoiceId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`, // Add authentication
         },
         body: JSON.stringify({
           status: 'Paid'

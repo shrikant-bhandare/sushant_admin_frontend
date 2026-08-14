@@ -3,6 +3,8 @@ import axios from 'axios';
 import jsPDF from 'jspdf';
 import autoTable from 'jspdf-autotable';
 
+const COMPANY_GSTIN = '-';
+
 const GSTR1Report = () => {
   const [orders, setOrders] = useState([]);
   const [taxableFilter, setTaxableFilter] = useState('taxable');
@@ -264,7 +266,7 @@ const GSTR1Report = () => {
       doc.text('shop no 10 Mount Unique Residency, Pashan-sus Rd,', 45, 22);
       doc.text('Near pratham WINE', 45, 27);
       doc.text('Phone no.: 9307025605 Email: sushantnangrepatil@gmail.com', 45, 32);
-      doc.text('GSTIN: 27AIJPL3296J1ZR, State: 27-Maharashtra', 45, 37);
+      doc.text(`GSTIN: ${COMPANY_GSTIN}, State: 27-Maharashtra`, 45, 37);
 
       // Report Title
       doc.setFontSize(18);
@@ -291,7 +293,7 @@ const GSTR1Report = () => {
       autoTable(doc, {
         startY: doc.lastAutoTable.finalY + 2,
         body: [
-          ["1.GSTIN:", "27AIJPL3296J1ZR"],
+          ["1.GSTIN:", COMPANY_GSTIN],
           ["2.(a)Legal name of the registered person:", "Sushant Computerized Mobile Repaire Center"],
           ["(b)Trade name, if any", ""],
           ["3.(a)Aggregate Turnover in the preceding Financial Year:", ""],
@@ -335,7 +337,7 @@ const GSTR1Report = () => {
           }
 
          return [
-        order.gstNumber || '-',
+        COMPANY_GSTIN,
         order.ticketNumber.split('-')[1] || '-',
         order.date ? new Date(order.date).toLocaleDateString('en-GB').replaceAll('/', '-') : '-',
         order.total || '0.0',
@@ -670,7 +672,7 @@ const GSTR1Report = () => {
                     <div>{order.customerName}</div>
                     <div className="text-xs text-gray-500">{order.phone}</div>
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{order.gstNumber || '-'}</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{COMPANY_GSTIN}</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{order.ticketNumber.split('-')[1] || '0.0'}</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{order.date ? new Date(order.date).toLocaleDateString('en-GB').replaceAll('/', '-') : '-'}</td>
                   

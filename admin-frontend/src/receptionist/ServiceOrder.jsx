@@ -854,7 +854,7 @@ const addPDFHeader = (pdf, invoice, margins, pageWidth) => {
   pdf.text(`Date: ${new Date(invoice.createdAt).toLocaleDateString()}`, rightColumnX, headerY + 9);
   pdf.text(`Time: ${new Date(invoice.createdAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`, rightColumnX, headerY + 13);
   pdf.text("Phone: 9307025605", rightColumnX, headerY + 17);
-  pdf.text("GSTIN: 27AIJPL3296J1ZR", rightColumnX, headerY + 21);
+  pdf.text("GSTIN: -", rightColumnX, headerY + 21);
   
   // Add a line separator
   pdf.setDrawColor(200, 200, 200);
@@ -1131,7 +1131,7 @@ const findTableAtPosition = (yPosition, tablePositions) => {
             <p className="text-sm text-gray-600"><span className="font-bold">Date:</span> <span>{new Date(invoice.createdAt).toLocaleDateString()}</span> <span className="font-bold">Time : </span> <span>{new Date(invoice.createdAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span></p>
             <p className="text-sm text-gray-600"><span className="font-bold">Phone:</span> <span> 9579682717</span></p>
             <p className="text-sm text-gray-600"><span className="font-bold">Email:</span><span> sushantnangrepatil@gmail.com </span></p>
-            <p className="text-sm text-gray-600"><span className="font-bold">GSTIN:</span> <span> 27AIJPL3296J1ZR</span></p>
+            <p className="text-sm text-gray-600"><span className="font-bold">GSTIN:</span> <span> -</span></p>
           </div>
         </div>
 
