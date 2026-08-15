@@ -843,17 +843,15 @@ const addPDFHeader = (pdf, invoice, margins, pageWidth) => {
   
   // Company details - left side
   const leftColumnX = margins.left;
-  pdf.text("The Iphone Technician", leftColumnX, headerY + 10);
-  pdf.text("Shop no.10, Mount Unique Residency, Pashan - Sus Rd,", leftColumnX, headerY + 14);
-  pdf.text("Near Pratham Wine, Mohan Nagar Co-Op Society,", leftColumnX, headerY + 18);
-  pdf.text("Baner, Pune, Maharashtra 411045", leftColumnX, headerY + 22);
+  pdf.text("Bramhanpuri, Near Swami Samarth Mandir,", leftColumnX, headerY + 10);
+  pdf.text("Urun Ishwarpur, Maharashtra 415409", leftColumnX, headerY + 14);
   
   // Order details - right side
   const rightColumnX = pageWidth - 70;
   pdf.text(`Order No: ${invoice.ticketNumber}`, rightColumnX, headerY + 5);
   pdf.text(`Date: ${new Date(invoice.createdAt).toLocaleDateString()}`, rightColumnX, headerY + 9);
   pdf.text(`Time: ${new Date(invoice.createdAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`, rightColumnX, headerY + 13);
-  pdf.text("Phone: 9307025605", rightColumnX, headerY + 17);
+  pdf.text("Phone: 9763636381", rightColumnX, headerY + 17);
   pdf.text("GSTIN: -", rightColumnX, headerY + 21);
   
   // Add a line separator
@@ -884,7 +882,7 @@ const addPDFFooter = (pdf, invoice, margins, pageWidth, pageHeight) => {
   
   pdf.setFont("helvetica", "normal");
   pdf.setFontSize(8);
-  pdf.text("For any queries, contact us at sushantnangrepatil@gmail.com or call 9307025605", centerX, footerY + 12, { align: 'center' });
+  pdf.text("For any queries, contact us at sushantnangrepatil@gmail.com or call 9763636381", centerX, footerY + 12, { align: 'center' });
   
   // Reset text color
   pdf.setTextColor(0, 0, 0);
@@ -1119,17 +1117,15 @@ const findTableAtPosition = (yPosition, tablePositions) => {
             />
             <div>
               <h1 className="text-2xl font-bold">Sushant Computerized Mobile Repaire Center</h1>
-              <p className="text-sm text-gray-600">The Iphone Technician</p>
-              <p className="text-sm text-gray-600">Shop no.10, Mount Unique Residency, Pashan - Sus Rd,</p>
-              <p className="text-sm text-gray-600">Near Pratham Wine, Mohan Nagar Co-Op Society,</p>
-              <p className="text-sm text-gray-600">Baner, Pune, Maharashtra 411045</p>
-              <p className="text-sm font-bold text-gray-600">(Open Time : 11AM to 11PM MONDAY CLOSED !!)</p>
+              <p className="text-sm text-gray-600">Bramhanpuri, Near Swami Samarth Mandir,</p>
+              <p className="text-sm text-gray-600">Urun Ishwarpur, Maharashtra 415409</p>
+              <p className="text-sm font-bold text-gray-600">(Open Time : 8:30 AM to 8:00 PM ALL DAYS OPEN)</p>
             </div>
           </div>
           <div className="relative ">
             <p className="text-sm text-gray-600"><span className="font-bold">Order No:</span> <span>{invoice.ticketNumber}</span></p>
             <p className="text-sm text-gray-600"><span className="font-bold">Date:</span> <span>{new Date(invoice.createdAt).toLocaleDateString()}</span> <span className="font-bold">Time : </span> <span>{new Date(invoice.createdAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span></p>
-            <p className="text-sm text-gray-600"><span className="font-bold">Phone:</span> <span> 9579682717</span></p>
+            <p className="text-sm text-gray-600"><span className="font-bold">Phone:</span> <span> 9763636381</span></p>
             <p className="text-sm text-gray-600"><span className="font-bold">Email:</span><span> sushantnangrepatil@gmail.com </span></p>
             <p className="text-sm text-gray-600"><span className="font-bold">GSTIN:</span> <span> -</span></p>
           </div>
@@ -1309,7 +1305,7 @@ const findTableAtPosition = (yPosition, tablePositions) => {
                 {/* Footer */}
         <div className="text-center mt-8 bg-green-600 text-white py-4 rounded">
           <p className="text-sm font-bold">Thank you for your business!</p>
-          <p className="text-sm">For any queries, contact us at sushantnangrepatil@gmail.com or call 9579682717.</p>
+          <p className="text-sm">For any queries, contact us at sushantnangrepatil@gmail.com or call 9763636381.</p>
         </div>
       </div>
 

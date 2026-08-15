@@ -263,9 +263,9 @@ const GSTR1Report = () => {
       doc.setFontSize(12);
       doc.text('Sushant Computerized Mobile Repaire Center', 45, 15,);
       doc.setFontSize(10);
-      doc.text('shop no 10 Mount Unique Residency, Pashan-sus Rd,', 45, 22);
-      doc.text('Near pratham WINE', 45, 27);
-      doc.text('Phone no.: 9307025605 Email: sushantnangrepatil@gmail.com', 45, 32);
+      doc.text('Bramhanpuri, Near Swami Samarth Mandir,', 45, 22);
+      doc.text('Urun Ishwarpur, Maharashtra 415409', 45, 27);
+      doc.text('Phone no.: 9763636381 Email: sushantnangrepatil@gmail.com', 45, 32);
       doc.text(`GSTIN: ${COMPANY_GSTIN}, State: 27-Maharashtra`, 45, 37);
 
       // Report Title

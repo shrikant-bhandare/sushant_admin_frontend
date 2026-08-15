@@ -1413,11 +1413,11 @@ const findTableAtPosition = (yPosition, tablePositions) => {
                     <span>For : </span>
                     <strong>Sushant Computerized Mobile Repaire Center</strong>
                   </p>
-                  <img
+                  {/* <img
                     src="/assets/images/signature1.png"
                     alt="Stamp"
                     style={{ width: "60px", height: "60px", objectFit: "contain", display: "inline-block", margin: "5px 0" }}
-                  />
+                  /> */}
                   <p style={{ margin: "3px 0 0 0", fontSize: "9px", color: "#000000", fontWeight: "bold" }}>Authorized Signatory</p>
                 </td>
               </tr>

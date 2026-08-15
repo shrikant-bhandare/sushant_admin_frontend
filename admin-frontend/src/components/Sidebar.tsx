@@ -116,7 +116,7 @@ const Sidebar: React.FC<SidebarProps> = ({ toggleSidebar }) => {
           { icon: <FaUsers />, text: "User Management", id: "users" },
           { icon: <FaFingerprint />, text: "Biometric Users", id: "biometric-users" },
           { icon: <FaMobile />, text: "Device Management", id: "biometric-devices" },
-          { icon: <FaClock />, text: "Attendance Management", id: "attendance" },
+          // { icon: <FaClock />, text: "Attendance Management", id: "attendance" }, // Hidden for all roles
           { icon: <FaBoxOpen />, text: "Device Inventory", id: "device-inventory" },
           { icon: <FaBell />, text: "Notifications", id: "notifications" },
           { icon: <FaWhatsapp />, text: "WhatsApp Messaging", id: "whatsapp-settings" },
@@ -154,7 +154,7 @@ const Sidebar: React.FC<SidebarProps> = ({ toggleSidebar }) => {
           // { icon: <FaTools />, text: "Repairs", id: "repairs" },
           { icon: <FaTasks />, text: "Tasks", id: "tasks" }, 
           { icon: <FaTools />, text: "Requested Parts", id: "requestedParts" }, 
-          { icon: <FaUserClock />, text: "Quick Attendance", id: "quick-attendance" },
+          // { icon: <FaUserClock />, text: "Quick Attendance", id: "quick-attendance" }, // Hidden for all roles
           { icon: <FaBoxOpen />, text: "Inventory", id: "inventory" },
           { icon: <FaBell />, text: "Notifications", id: "notifications" },
           // { icon: <FaInstagram />, text: "Social Media", id: "social-media" },
